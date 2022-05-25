@@ -24,6 +24,8 @@ def main():
 
         board.draw_cubes(WIN)
         pygame.display.update()
+        number = 1
+        word = 'two'
             
     pygame.quit()
 
