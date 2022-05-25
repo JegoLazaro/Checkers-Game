@@ -1,0 +1,1 @@
+if game.turn == RED:
