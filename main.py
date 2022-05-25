@@ -19,15 +19,11 @@ def main():
     clock = pygame.time.Clock()
     game = Game_Sys(WIN)
 
-    """
-    TEST FOR PIECE MOVEMENT
-    piece = board.get_piece(0,1)
-
-    board.move(piece, 4, 3)
-    """
-
     while(run):
         clock.tick(FPS)
+
+        if game.winner() != None:
+            print(game.winner() + "WINS")
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -36,8 +32,8 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
                 row, col = get_row_col_mouseclick(pos)
-                if game.turn == RED:
-                    game.select(row,col)
+                
+                game.select(row,col)
 
         game.update()
             
