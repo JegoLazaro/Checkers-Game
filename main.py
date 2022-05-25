@@ -23,7 +23,7 @@ def main():
         clock.tick(FPS)
 
         if game.winner() != None:
-            print(game.winner() + "WINS")
+            print(game.winner())
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
