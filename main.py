@@ -2,8 +2,8 @@ import pygame
 from checkers.const_val import *
 from checkers.board import Board
 
-WIN = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('CHECKERS')
+WIN = pygame.display.set_mode((WIDTH, HEIGHT)) # To display the whole board for the gui of the game
+pygame.display.set_caption('CHECKERS') # Title that appears at the top of the interface
 
 FPS = 60
 
@@ -22,10 +22,8 @@ def main():
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pass
 
-        board.draw_cubes(WIN)
+        board.draw(WIN)
         pygame.display.update()
-        number = 1
-        word = 'two'
             
     pygame.quit()
 
